@@ -13,7 +13,7 @@ resource "aws_key_pair" "kp" {
   }
 }
 
-resource "aws_key_pair" "kp" {
+resource "aws_key_pair" "keypair" {
   count = var.pub_key != null ? 1 : 0
   key_name   = var.key_name     # Create a "myKey" to AWS!!
   public_key = var.pub_key
