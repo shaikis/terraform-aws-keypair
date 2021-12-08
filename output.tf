@@ -5,3 +5,8 @@ output "key_pair_arn" {
 output "keypair_arn" {
     value = aws_key_pair.keypair.*.arn
 }
+
+output "private_key" {
+  value     = tls_private_key.kp.*.private_key_pem
+  sensitive = true
+}
